@@ -1,0 +1,28 @@
+{
+	"name": "nam-react",
+	"version": "1.0.0",
+	"description": "This is namaste react series",
+	"main": "app.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ashwanizsktm/nam-react.git"
+	},
+	"keywords": [
+		"react",
+		"namste",
+		"react",
+		"ashwani"
+	],
+	"author": "Ashwani",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/ashwanizsktm/nam-react/issues"
+	},
+	"homepage": "https://github.com/ashwanizsktm/nam-react#readme",
+	"devDependencies": {
+		"parcel": "^2.9.3"
+	}
+}
