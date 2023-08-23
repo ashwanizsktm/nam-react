@@ -31,6 +31,3 @@ Parcel
 - Consitent hashing
 - diffrential bundling - (to support all the browser and the older browsers).
 - Error handling - (beautiful error view => better error where we can understand the errors easily).
-
-
-
