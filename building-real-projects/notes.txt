@@ -1,0 +1,43 @@
+project planning 
+initial wireframes
+https://docs.google.com/presentation/d/1zxYaDzgV1MYJ6mFA3JGqrFxRm_K7k7typImyBU6qnzI/edit#slide=id.p
+
+Resturant project
+
+list of components
+ -- Header
+ -- Logo
+ -- nav items
+ -- body
+    -- serach
+    -- resturant card-container
+      -- resturant card
+         -- name, image, cuisine, rating delivery time
+
+ -- Footer
+   - copyright
+   - Links
+   - Address
+
+
+what is config driven UI:-
+Answer:-  when the UI is driven by configs it known as config driven ui what does it mean is if I open
+    swiggy.com all the availavle resturant card data will be different for Banglore, Chennai, Mumbai and many 
+    more so for all the cities the data is getting drirven by the configs & all these configs are handled by
+    backend. we won't make different website for different cities right, so we need something as config driven UI.
+
+
+Ques:- why we need the keys in the components?
+Answer: - let's say we have a parent component and it has many child compoents, while rendering in the dom 
+  these child component needs to have unique id for each. they should be uniquely represented because let's say if 
+  other resturant card is getting added on the page if this resturant card is having an unique id then it' will just render 
+  only those which are added, it'll not rerender the page to put those new added cards. it helps in improving the performance
+  of the app. incase we are not adding key it'll rerender the page once again to load all the resturant card it's a huge perfornce hit.
+
+ logically we can use index as key but React itself says that don't use index as a key. it may change the order of the resturant card
+
+see this:- https://medium.com/@vraa/why-using-an-index-as-key-in-react-is-probably-a-bad-idea-7543de68b17c#:~:text=The%20reason%20is%20because%20you,just%20the%20content%20is%20changed.  
+
+
+
+
