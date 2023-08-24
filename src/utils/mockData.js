@@ -1,58 +1,3 @@
-import React from 'react';
-import ReactDom from "react-dom/client";
-
-const Header = () => {
-    return (
-        <div className='header'>
-            <div className='logo-container'>
-                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7OCbzvRLLbTMEOxv1E5fFBQ4N2cfJW-PSg6MeEtLJ&s' />
-            </div>
-            <div className='nav-items'>
-                <ul>
-                    <li>Home</li>
-                    <li>About us</li>
-                    <li>Contact us</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div>
-    )
-}
-
-// there is something called inline styling but this is not the prefered way.
-// we can write like this or we can take the varible out and put in in obj.. and use it.
-//  <div className='res-card' style={{backgroundColor: '#f0f0f0'}}>
-
-// we can receive props as an arguments an js object & from here we can set the all props property or argument.
-// we can destructure also in case in props obj we've got a lot of values & we need only few in that case 
-//  destructuring will get applied.
-/*
-const RestaurantCard = ({resName, resStar}) => { // it could be written in this way as well.
-
- const RestaurantCard = (props) => { 
-    const {resName, resStar} = props;
-    // return(
-        <div>
-           <h3>{resName}</h3>
-           <p>{resStar}</p>
-        </div> 
-    )}
- */
-const imageCdnId = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
-const RestaurantCard = (props) => {
-    const { name, cloudinaryImageId, cuisines, avgRating, totalFee, deliveryTime } = props?.restData;
-    return (
-        <div className='res-card'>
-            <img src={imageCdnId + cloudinaryImageId} alt='res-logo' className='res-logo' />
-            <h3>{name}</h3>
-            <h4>{cuisines.join(', ')}</h4>
-            <h4>Ratings - {avgRating}</h4>
-            <h4>Delivery time - {deliveryTime} minutes</h4>
-            <h4>cost - {`₹ ${totalFee / 100}`}</h4>
-        </div>
-    )
-}
-
 const restaurantsDataList = [
     {
         "name": "Leon's - Burgers & Wings (Leon Grill)",
@@ -147,7 +92,7 @@ const restaurantsDataList = [
             "Burmese",
             "Tibetan"
         ],
-        "avgRating": 4.1,
+        "avgRating": 3.8,
         "totalFee": 4000,
         "deliveryTime": 34,
     },
@@ -181,7 +126,7 @@ const restaurantsDataList = [
             "Desserts",
             "Beverages"
         ],
-        "avgRating": 4.1,
+        "avgRating": 3.6,
         "totalFee": 3000,
         "deliveryTime": 25,
         "totalFee": 3000
@@ -203,39 +148,6 @@ const restaurantsDataList = [
         "deliveryTime": 32,
         "totalFee": 3200
     }
-]
+];
 
-const Body = () => {
-    return (
-        <div className='body'>
-            <div className='search'>search</div>
-            <div className='res-container'>
-                {/*
-                    props stands for properties.
-                    Props are arguments passed into React components.
-                    Props are passed to components via HTML attributes.
-                    React Props are like function arguments in JavaScript and attributes in HTML.
-                    To send props into a component, we use the same syntax we use in HTML attributes.
-                */}
-                
-                {
-                    restaurantsDataList.map((resturantData, index) => (
-                        <RestaurantCard key={resturantData.cloudinaryImageId} restData={resturantData} />
-                    ))
-                }
-                {/* we pass property from the component which is called props */}
-            </div>
-        </div>
-    )
-}
-export const AppLayout = () => {
-    return (
-        <div className='app'>
-            <Header />
-            <Body />
-        </div>
-    )
-}
-
-const root = ReactDom.createRoot(document.getElementById("root"));
-root.render(<AppLayout />)
+export default restaurantsDataList;

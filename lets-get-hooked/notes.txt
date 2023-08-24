@@ -1,0 +1,58 @@
+From chapter 5 all the folder will be having 2 files
+    1. notes.txt
+    2. app.js
+
+but the real project structure will be following the standdard conventions
+where all th code will go inside the src folder. whatever learning, description and 
+commented code will be there in src will be making a copy and putting in the learning folder
+and before we push code to master we make our code clean and comment free.
+
+2 types of Export/Import
+== Default Export/Import
+ ==> export default <variable_name>
+ ==> import <variable_name> from "path";
+
+-- Named Export/Import
+  export const <variable_name>;
+  import {<variable_name>} from "path";
+
+React hooks: it's a normal javascript function
+1. useState() - superpowerful state variable 
+  1. local state variable ==> superpower variable. ==> when we give super power to normal variable which will have the power to
+     update the state of variable is called hooks. React hooks is a normal js function at the end.
+  
+  2. useState as it's a normal function it'll return the array of 2 elements [variable_name, fn]
+     so in first variable we pass the default variable and as 2nd we pass the function.
+
+    const [listOfRestaurant, setListOfRestaurant] = useState(restaurantsDataList);
+
+2. useEffect()
+
+
+
+
+Note: - what the problem all the library and frameworks are trying to resolve is that 
+the data layer and UI layer has to be in sync so as soon as the data changes then the UI layer should get changed efficiently
+
+When we say React is fast then there are following thins which makes it fast
+  1. It is fast & efficient in Dom manupulation.
+  2. vertual Dom : - As the name implies, the virtual DOM is a much lighter replica of the actual DOM in the form of objects. 
+  The virtual DOM can be saved in the browser memory and doesn't directly change what is shown on the user's browser.
+
+     React uses Virtual DOM, which can be thought of as a blueprint of the DOM. 
+    When any changes are made to React elements, the Virtual DOM is updated. 
+    The Virtual DOM finds the differences between it and the DOM and re-renders only the elements in the DOM that has changed. 
+    This makes the Virtual DOM faster and more efficient than updating the entire DOM.
+   see this as a refresher:- https://stackoverflow.com/questions/36012239/is-shadow-dom-fast-like-virtual-dom-in-react-js/36906251#36906251
+
+How react works behind the scene
+it uses reconciliation alogorithm which is also known as React fiber.
+
+lets understand with example:-
+ let's say we have 10 cards in the real dom right now & I am apllying filter on it to filter out the 7 cards oout of it based on some
+ calculations(conditions) now what react will do is it will create a copy of the actual dom(known as virtual dom(saved in browser memory))
+ & whenever the small changes occur in the component, as in example we are filtering out 7 out of 10 then it will find the differece,
+between the actual dom and virtual dom & finally it will quickly update the ACTUAL DOM (This whole process provided by react makes it fast)
+
+Diff Algorithm: - The process of finding difference between the virtual dom and real dom is done by Diff Algorithm.
+
