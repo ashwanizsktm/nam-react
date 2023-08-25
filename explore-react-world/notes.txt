@@ -1,0 +1,26 @@
+The Ultimate Guide to Microservices Vs. Monolithic Architecture
+See this: - https://algoscaletech.medium.com/the-ultimate-guide-to-microservices-vs-monolithic-5e1220d2b4c2
+
+General overview
+Monolithic Architecture:- This Architecture was earlier getting used in companies where all the serverices
+(UI servies, Backend Services, notification, sms devops and more) were inside 
+the 1 big project and was maintained under the same repository where all the backend, frontend, deveops quality Engineers
+are working under the same repository.
+
+
+Microservice Architecture: - Now a days all companies are using this architecture because here all the servies are 
+working independently UI service, Backend Service, Notification service, sms service, Database architecture
+ >>> it follows the single risponsibility principles where each & every service has their own job
+
+
+basically there are 2 ways talking to backend service
+1.  LOADS ===>    API(takes some time) =====>   RENDER
+In this approach first web gets tries to loaded on the browser so during that process it will be loading for sometime 
+then api comes from server & then finally we load it.
+
+
+2.  LOADS   =====>  RENDER   =====>     API      =======>   RENDER
+Mostly we follow the second way bcz as soon as the page loads we some hardcoded data images banner some logo and businees branding
+small description & stuff (ex: goldenpi.com) till the time api will get loaded and we will rerender the wab page with the 
+dynamic data (coming from server), resulting better UX experience. React doesn't get bothered about the rerendering,
+Because the rendering mechanism of React is very fast. What react makes fast is because of it's rendering mechanism.

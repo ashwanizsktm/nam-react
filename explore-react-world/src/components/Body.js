@@ -6,6 +6,14 @@ const Body = () => {
     const [listOfRestaurant, setListOfRestaurant] = useState([]);
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
     const [searchText, setSearchText] = useState("");
+    
+    /*   Whenever there is  a change the in state(i.e value) variable(usesState) 
+         React triggers a reconciliation algorithm (rerenders the component)*/ 
+    /*   In the Search whenever the we are updating a value(i.e on each key stroke)
+         React triggers a reconciliation algorithm (rerenders the component)
+         let's check with console.log("body renders") by putting above the comments.
+         console.log("body renders");
+    */
 
     useEffect(()=> {
         fetchData();
@@ -20,7 +28,7 @@ const Body = () => {
     }
 
     return listOfRestaurant.length === 0 ? ( 
-          <Shimmer /> 
+          <Shimmer/> 
           ) : 
           (
             <div className='body'>
@@ -32,9 +40,8 @@ const Body = () => {
                 <div className='search'>
                     <input type='text' placeholder='search restaurant' value={searchText}
                      onChange={(e) => {
-                        setSearchText(e.target.value);
-                        if(e.target.value==='') fetchData();
-                    }}  />
+                        setSearchText(e.target.value)
+                        if(e.target.value==='') fetchData() }}  />
                     <button onClick={() => {
                         const filteredRestaurantByName = listOfRestaurant.filter(res => 
                             res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -55,3 +62,4 @@ const Body = () => {
     )
 }
 export default Body;
+/* End of Body Component*/
