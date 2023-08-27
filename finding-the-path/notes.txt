@@ -1,0 +1,7 @@
+There are 2 types of routing
+1. Client side routing:- In this routing process all the pages/components bundled together so whenever we navigate to 
+other page then browser doesn't refresh it just get changed  to the other component with the help of routing mechanism(provided by react router dom).
+
+2. Server side routing : - initially we had about, contact, & products etc in the header & when we clicked then network call
+  happens & it send the request to server & we used to fetch these pages, this process is called server side routing also it
+  is called as multi page application.
