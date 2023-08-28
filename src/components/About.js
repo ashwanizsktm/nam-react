@@ -1,11 +1,22 @@
+import UserClass from "./UserClass";
+import { Component } from "react";
+export class About extends Component {
+  constructor() {
+	super();
+  }
 
-
-const About = () => {
-  return (
-    <div>
-        <h1>About us page</h1>
-    </div>
-  )
+  componentDidMount() {
+	// console.log("parent componentdidmount called")
 }
 
-export default About
+  render() {
+    return(
+      <div>
+          <h1>About us page</h1>
+          <h2>This is React series</h2>
+          <UserClass name="First"/>
+      </div>
+    )
+  }
+}
+export default About;
