@@ -1,0 +1,2 @@
+To understand in a clear way just have a look at this diagram about the execution order of lifecycle methods
+see:- https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/

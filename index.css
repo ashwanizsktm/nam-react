@@ -147,12 +147,24 @@ a {
     color: #222222;
 }
 
-.menu-shimmer> .img-container {
+.menu-shimmer> .img-title-wrap> .img-container {
     width: 400px;
     height: 350px;
     background-color: #fff;
 }
+
+.menu-shimmer> .img-title-wrap> h2 {
+    font-size: 35px;
+}
+
 .menu-shimmer> .details-container {
     margin-top: 50px;
     margin-left: 130px;
+}
+
+
+/* users */
+.user-card {
+    padding: 20px;
+    border: 1px solid #222222;
 }
