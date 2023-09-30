@@ -1,4 +1,6 @@
 import { CDN_URL } from "../utils/constants";
+// named export will be imported as in {} whereas default export doesn't need this.
+
 const RestaurantCard = (props) => {
     const { name, cloudinaryImageId, cuisines, avgRating, costForTwo, locality } = props?.resturantData?.info
     return (

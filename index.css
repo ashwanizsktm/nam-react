@@ -16,6 +16,22 @@ body {
     padding: 20px 40px 0 0;
 }
 
+.nav-items>ul>li>.status{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    text-transform: lowercase;
+    display: inline-block;
+}
+
+.active {
+    background-color: green;
+}
+
+.inactive {
+    background-color: red;
+}
+
 .nav-items>ul {
     list-style: none;
     display: flex;

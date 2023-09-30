@@ -1,0 +1,6 @@
+1. Maintaing the code in modular fashion. ==> spliting app in modules so that code becomes readable, maintable,
+   testable. testing becomes very easy and error can be caught very easily.
+
+2. Single responsibility principal => we get features of reusibility
+
+3. hooks are just utility functions. creating custom hooks is the same as creating your own utility functions.
