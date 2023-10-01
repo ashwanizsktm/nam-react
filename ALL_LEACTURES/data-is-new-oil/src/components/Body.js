@@ -7,6 +7,8 @@ import useOnlineStatus from '../utils/useOnlineStatus';
 import UserContext from '../utils/UserContext';
 
 const Body = () => {
+    const {loggedInUser, setUserName} = useContext(UserContext);
+
     const [listOfRestaurant, setListOfRestaurant] = useState([]);
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
     const [searchText, setSearchText] = useState("");
@@ -52,6 +54,10 @@ const Body = () => {
                         setFilteredRestaurant(filteredRestaurantByName);
                     }}>search</button>
                 </div>
+                <div style={{margin: '20px'}}>
+                    <input style={{padding: '10px'}} type='text' value={loggedInUser} onChange={(e)=> setUserName(e.target.value)}/>
+                </div>
+              
             </div>
 
             <div className='res-container'>

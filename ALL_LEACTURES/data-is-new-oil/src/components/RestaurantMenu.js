@@ -29,11 +29,16 @@ const RestaurantMenu = () => {
             </div>
             <div className="manu-items">
               {itemCards.map((category, index) => (
+                 /*
+                    here it becomes the controlled component of Restaurant category component bcz it's this RestaurantMenu component
+                    is controlling the RestaurantCategory component.
+                */
               <RestaurantCategory key={index} category={category}
                showItems={index===showIndex && true}  setShowIndex={()=> setShowIndex(index)}/>
               ))}
             </div>
         </div>
     )
+
 }
 export default RestaurantMenu;

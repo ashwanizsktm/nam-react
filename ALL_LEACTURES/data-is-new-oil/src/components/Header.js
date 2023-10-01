@@ -2,10 +2,16 @@ import  {LOGO_URL}  from "../utils/constants";
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
+
+
 
 const Header = () => {
     const [btnNameReact, setBtnNameReact] = useState("Log In");
     const onlineStatus = useOnlineStatus();
+
+    // react gives the hooks called useContext to get access fo the userContext.
+    const data = useContext(UserContext);
     return (
         <div className='header'>
             <div className='logo-container'>
@@ -22,6 +28,7 @@ const Header = () => {
                     <button onClick={() => {btnNameReact==='Log In' ? setBtnNameReact('Log out') : setBtnNameReact('Log In')}}>
                         {btnNameReact}
                     </button>
+                    <li>{data.loggedInUser}</li>
                 </ul>
             </div>
         </div>
