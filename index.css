@@ -259,10 +259,12 @@ a {
     object-fit: cover;
 }
 
-.manu-items .accordian-container .body .items-container .img-wrapper span {
+.manu-items .accordian-container .body .items-container .img-wrapper button {
     background-color: rgb(135, 238, 135);
     padding: 9px 18px;
     border-radius: 6px;
+    border: none;
+    outline:none;
     display: inline-block;
     position: absolute;
     bottom: 5px;
