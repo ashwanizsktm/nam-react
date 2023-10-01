@@ -1,6 +1,8 @@
 const Grocery = () => {
     return (
-        <h1>This is the grocery component which is have many sub components</h1>
+        <div>
+            <h1>This is the grocery component which is have many sub components</h1>
+        </div>
     )
 }
 export default Grocery;
