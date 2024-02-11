@@ -21,8 +21,6 @@ export const AppLayout = () => {
                 <Outlet />
             </div>
         </Provider>
-
-
     )
 }
 
@@ -66,6 +64,8 @@ const appRouter = createBrowserRouter([
         ],
         errorElement: <Error />
     },
-])
+]);
+
+
 const root = ReactDom.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={appRouter} />)
